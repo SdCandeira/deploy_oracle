@@ -39,7 +39,7 @@ function Cred() {
     <Container>
       <Title>Lista de Credenciados IPSM</Title>
       <Grid users={users} setUsers={setUsers} showActions={false}/>
-      {/* Outros componentes e lógica para a página inicial */}
+      {}
     </Container>
     <GlobalStyle />
     </>
@@ -53,7 +53,7 @@ function Admin() {
 
   const getUnit = async () => {
     try {
-      const res = await axios.get("http://localhost:3100/units"); // Ajuste a URL aqui
+      const res = await axios.get("http://localhost:3100/units");
       setUnit(res.data.sort((a, b) => (a.id_unidade > b.id_unidade ? 1 : -1)));
     } catch (error) {
       toast.error(error.message);
